@@ -1,6 +1,6 @@
 
 function setup() {
-  createCanvas(1080, 720);
+  createCanvas(windowWidth, windowHeight);
   engine = new Engine(0);
 }
 
@@ -16,4 +16,8 @@ function draw() {
 
 function keyPressed() {
   engine.processKey(keyCode);
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
